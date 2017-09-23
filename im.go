@@ -1,4 +1,4 @@
-package taobao
+package tbsdk
 
 import (
 	"strings"
