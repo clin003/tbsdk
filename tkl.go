@@ -11,7 +11,7 @@ type OpenTbkTpwdParam struct {
 	// 可选参数
 	User_id         string                    	`json:"user_id"`           // 可选 生成口令的淘宝用户ID
 	Logo            string                    	`json:"logo"`            // 可选 口令弹框logoURL
-	Ext           	string                  	`json:"ext"`            // 可选 扩展字段JSON格式
+	Ext           	map[string]string                  	`json:"ext"`            // 可选 扩展字段JSON格式
 }
 
 func (this OpenTbkTpwdParam) APIName() string {
@@ -23,7 +23,7 @@ func (this OpenTbkTpwdParam) Params() map[string]string {
 }
 
 func (this OpenTbkTpwdParam) ExtJSONParamName() string {
-	return "wireless_share_tpwd_create_response"
+	return "tpwd_param"
 }
 
 func (this OpenTbkTpwdParam) ExtJSONParamValue() string {
